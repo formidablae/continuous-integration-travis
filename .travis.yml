@@ -1,0 +1,13 @@
+language: ruby
+cache: bundler # caching to speed up dependency installation
+rvm:
+- replace me with rvm
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev # required to avoid SSL errors
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+script:
+- echo "Starting build!"
