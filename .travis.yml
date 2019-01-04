@@ -11,3 +11,5 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 script:
 - echo "Starting build!"
+- REPLACE-ME-WITH-BUILD-SCRIPT
+- echo "Finished build."
