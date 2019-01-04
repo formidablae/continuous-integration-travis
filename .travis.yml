@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler # caching to speed up dependency installation
 rvm:
-- replace me with rvm
+- 2.4.1
 addons:
   apt:
     packages:
@@ -11,5 +11,11 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 script:
 - echo "Starting build!"
-- REPLACE-ME-WITH-BUILD-SCRIPT
+- bundle exec jekyll build
 - echo "Finished build."
+jobs:
+  include:
+    - stage: build
+      script: script/build
+    - stage: testlinks
+      script: REPLACE-ME-WITH-HTML-PROOFER-SCRIPT
